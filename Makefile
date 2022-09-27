@@ -5,8 +5,8 @@ LANG = python
 DATASET = py150
 DATADIR = dataset/${DATASET}/line_completion
 LITFILE = dataset/${DATASET}/literals.json
-OUTPUTDIR = save/${DATASET}
-PRETRAINDIR = microsoft/CodeGPT-small-java # The output directory where the model predictions and checkpoints will be written. 
+OUTPUTDIR = save/${DATASET} # The output directory where the model predictions and checkpoints will be written. 
+PRETRAINDIR = microsoft/CodeGPT-small-java 
 LOGFILE = logs/completion_py150_eval.log
 
 inference-python: 
@@ -22,5 +22,4 @@ inference-python:
 			--block_size=1024 \
 			--eval_line \
 			--logging_steps=100 \
-			--seed=42 \
-			--no_cuda 
+			--seed=42 
